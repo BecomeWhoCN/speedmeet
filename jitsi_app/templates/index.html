@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jitsi Meet Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <img src="/static/img/speedMeet_logo.png" alt="logo" id="speedmeet_logo">
+
+        <h1>视频会议管理器(内网)</h1>
+        
+        <!-- 创建会议 -->
+        <div id="create-meeting-section">
+            <input type="text" id="remark-input" placeholder="备注信息（例如：XXX部门XXX会议）">
+            <button id="create-room">创建新会议</button>
+        </div>
+        
+        <!-- 自定义房间号 -->
+        <div id="custom-room-section">
+            <input type="text" id="custom-room-input" placeholder="输入房间号">
+            <button id="join-custom-room">加入会议</button>
+        </div>
+        
+        <img src="/static/img/672c36cc36639.jpg" alt="imgmeet" id="imgmeet">
+        <!-- 会议列表 -->
+        <div id="meeting-list-section">
+            <h2>会议列表</h2>
+            <ul id="meeting-list">
+                <!-- 动态填充会议链接 -->
+                {% for room_name, room_data in meetings.items() %}
+                    <li id="meeting-{{ room_name }}">
+                        <a href="/join_meeting/{{ room_name }}" target="_blank">加入房间 {{ room_name }}</a>
+                        <span class="remark">（{{ room_data.remark }}）</span>
+                        <button onclick="deleteMeeting('{{ room_name }}')">删除</button>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

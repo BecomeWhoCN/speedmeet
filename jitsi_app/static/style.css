@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f4f4f9;
+}
+
+#speedmeet_logo{
+    width: 150px;
+    height: auto;
+    margin: 20px;
+    text-align: left;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    max-width: 96%;
+    width: 700px;
+    margin: 20px auto;
+}
+
+#imgmeet{
+    width: 80%;
+    height: auto;
+    margin: 20px;
+    border-radius:20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#join-custom-room{
+    margin-left: 28px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+#meeting-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#meeting-list li {
+    margin: 10px 0;
+}
+
+#meeting-list a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#meeting-list a:hover {
+    text-decoration: underline;
+}
+
+/* 备注信息样式 */
+.remark {
+    color: #777;
+    margin-left: 10px;
+    font-style: italic;
+}
